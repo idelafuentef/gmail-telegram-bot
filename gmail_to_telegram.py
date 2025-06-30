@@ -9,14 +9,14 @@ import traceback
 import requests
 
 # ========== CONFIGURA ESTO ==========
-GMAIL_USER = "tu_email@gmail.com"
-GMAIL_PASS = "tu_contraseña"  # Usa tu contraseña de aplicación o normal si no tienes 2FA
+GMAIL_USER = os.getenv("GMAIL_USER")
+GMAIL_PASS = os.getenv("GMAIL_PASS")  # Usa tu contraseña de aplicación o normal si no tienes 2FA
 
 IMAP_SERVER = "imap.gmail.com"
 IMAP_PORT = 993
 
-TELEGRAM_BOT_TOKEN = "TU_TOKEN_DEL_BOT"
-TELEGRAM_CHAT_ID = "TU_CHAT_ID"  # Número que obtuviste con getUpdates()
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")  # Número que obtuviste con getUpdates()
 
 SEARCH_KEYWORDS = ["idealista", "nuevo anuncio", "piso en alquiler"]
 NUM_EMAILS = 10  # Cuántos correos recientes revisar
