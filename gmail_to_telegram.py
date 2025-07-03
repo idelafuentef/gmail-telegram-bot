@@ -85,10 +85,3 @@ def search_emails():
                         send_telegram_message(message)
                         time.sleep(1)  # Evita ser bloqueado
 
-if __name__ == "__main__":
-    try:
-        search_emails()
-        print("✅ Mensajes procesados y enviados.")
-    except Exception as e:
-        print("❌ Error:", e)
-        traceback.print_exc()
